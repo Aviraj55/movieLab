@@ -1,0 +1,36 @@
+Script started on Sun 15 Mar 2020 02:48:21 PM PDT
+]0;avirajm@bondi:~/hw5[avirajm@bondi ~/hw5]$ make
+gcc -c FileIO.c -o FileIO.o -ansi -std=c99 -Wall -g
+gcc -c DIPs.c -o DIPs.o -ansi -std=c99 -Wall -g
+gcc -c Image.c -o Image.o -ansi -std=c99 -Wall -g
+gcc -ansi -std=c99 -Wall -g -c Movie.c -o Movie.o
+gcc -ansi -std=c99 -Wall -g -c IterativeFilter.c -o IterativeFilter.o
+gcc -ansi -std=c99 -Wall -g -c ImageList.c -o ImageList.o
+gcc -ansi -std=c99 -Wall -g -c MovieIO.c -o MovieIO.o
+gcc -ansi -std=c99 -Wall -g MovieLab.c FileIO.o DIPs.o Movie.o Image.o MovieIO.o IterativeFilter.o ImageList.o -lm -o MovieLab
+]0;avirajm@bondi:~/hw5[avirajm@bondi ~/hw5]$ ./MovieLab -i cone.ppm -o hue0.yuv -start 0 -end 66 -step 6 -hue 
+
+The movie file hue0.yuv has been written successfully!
+12 frames are written to the file hue0.yuv in total.
+]0;avirajm@bondi:~/hw5[avirajm@bondi ~/hw5]$  ./MovieLab -m hue0.yuv -o reverse1.yuv -f 12  -s 300x200 -reverse
+The movie file hue0.yuv has been read successfully!
+
+"Operation Reverse" is done!
+The movie file reverse1.yuv has been written successfully!
+12 frames are written to the file reverse1.yuv in total.
+]0;avirajm@bondi:~/hw5[avirajm@bondi ~/hw5]$ ./MovieLab -bw -i EH.ppm -o bw0.yuv -end 10 -start 100 -step 15
+
+The movie file bw0.yuv has been written successfully!
+7 frames are written to the file bw0.yuv in total.
+]0;avirajm@bondi:~/hw5[avirajm@bondi ~/hw5]$ ./MovieLab -reverse -o reverse2.yuv -f 7 -s 480x360 -m bw0.yuv.
+The movie file bw0.yuv has been read successfully!
+
+"Operation Reverse" is done!
+The movie file reverse2.yuv has been written successfully!
+7 frames are written to the file reverse2.yuv in total.
+]0;avirajm@bondi:~/hw5[avirajm@bondi ~/hw5]$ clean[K[K[K[K[Kmake clean
+rm *.o MovieLab	bw0.yuv reverse1.yuv reverse2.yuv hue0.yuv 
+]0;avirajm@bondi:~/hw5[avirajm@bondi ~/hw5]$ exit
+exit
+
+Script done on Sun 15 Mar 2020 02:49:59 PM PDT
