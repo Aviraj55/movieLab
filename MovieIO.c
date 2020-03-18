@@ -10,8 +10,7 @@
 #include <assert.h>
 
 /* Load the movie frames from the input file */
-MOVIE *LoadMovie(const char *fname, int frameNum,
-                 unsigned int width, unsigned height)
+MOVIE *LoadMovie(const char *fname, int frameNum, unsigned int width, unsigned height)
 {
 	assert(fname);
 
@@ -39,8 +38,7 @@ MOVIE *LoadMovie(const char *fname, int frameNum,
 }
 
 /* Load one movie frame from the input file */
-YUVIMAGE *LoadOneFrame(const char* fname, int n,
-                       unsigned int width, unsigned height)
+YUVIMAGE *LoadOneFrame(const char* fname, int n, unsigned int width, unsigned height)
 {
 	FILE *file;
 	unsigned int x, y;
