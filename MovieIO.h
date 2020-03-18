@@ -9,12 +9,10 @@
 #include "FileIO.h"
 
 /* Load the movie frames from the input file */
-MOVIE *LoadMovie(const char *fname, int frameNum,
-                 unsigned int width, unsigned height);
+MOVIE *LoadMovie(const char *fname, int frameNum, unsigned int width, unsigned height);
 
 /* Load one movie frame from the input file */
-YUVIMAGE *LoadOneFrame(const char* fname, int n,
-                       unsigned int width, unsigned height);
+YUVIMAGE *LoadOneFrame(const char* fname, int n, unsigned int width, unsigned height);
 
 /* Save the movie frames to the output file */
 int SaveMovie(const char *fname, MOVIE *movie);
