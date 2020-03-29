@@ -162,7 +162,7 @@ int main(int argc, char *argv[])
 			step = atoi(argv[++n]);
 		}
 
-		if(!(step >= 0 || step <= 100))
+		if(!(step >= 0 && step <= 100))
 		{
 			
 			printf("\nPlease enter a valid input (0-100) for step: ");
