@@ -1,7 +1,5 @@
 /*********************************************************************/
-/* Homework Assignment 5, for EECS 22, Fall 2018                     */
-/*                                                                   */
-/* Author: Jordan Bonecutter                                         */
+/* Homework Assignment 5, for EECS 22, Winter 2020                   */
 /*                                                                   */
 /* IterativeFilter.c: file for iterative filters                     */
 /*                                                                   */
